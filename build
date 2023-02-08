@@ -103,7 +103,7 @@ read
 # ##########################################
 
 docker build \
-        -t k4m4rTaj/kali \
+        -t k4m4rtaj/kali \
         --build-arg DESKTOP_ENVIRONMENT=$XDESKTOP_ENVIRONMENT \
         --build-arg REMOTE_ACCESS=$XREMOTE_ACCESS \
         --build-arg KALI_PACKAGE=$XKALI_PKG \
@@ -128,7 +128,7 @@ docker create   --name kali \
                 -p $XSSH_PORT:$XSSH_PORT \
                 -t \
                 -v kaliuser_data:/home/kaliuser \
-                k4m4rTaj/kali
+                k4m4rtaj/kali
 
 # ##########################################
 # start the container
