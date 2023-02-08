@@ -65,8 +65,8 @@ ENV KALI_PKG=kali-${KALI_PACKAGE}
 
 RUN apt update -q --fix-missing
 RUN apt upgrade -y
-# RUN apt update && apt -y install kali-headless
-# RUN apt upgrade -y
+RUN apt update && apt -y install kali-headless
+RUN apt upgrade -y
 RUN apt -y install --no-install-recommends sudo wget curl dbus-x11 xinit openssh-server ${DESKTOP_PKG}
 
 # #####################################################
