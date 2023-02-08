@@ -57,16 +57,16 @@ ENV REMOTE_ACCESS=${REMOTE_ACCESS:-x2go}
 # #####################################################
 
 ENV KALI_PACKAGE=${KALI_PACKAGE:-default}
-ENV KALI_PKG=kali-${KALI_PACKAGE}
+ENV KALI_PKG=kali-linux-${KALI_PACKAGE}
 
 # #####################################################
 # install packages that we always want
 # #####################################################
-
+RUN apt-get update
 RUN apt update -q --fix-missing
-RUN apt upgrade -y
-RUN apt -y install kali-headless
+RUN apt -y install kali-linux-headless
 RUN apt -y install --no-install-recommends sudo wget curl dbus-x11 xinit openssh-server ${DESKTOP_PKG}
+RUN apt full-upgrade -y
 
 # #####################################################
 # create the start bash shell file
