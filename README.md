@@ -1,8 +1,8 @@
-# kali-linux-docker
+# kali-docker
 
 a docker container running a customizable full Kali Linux distribution.
 
-The build script lets you chose 
+The build script lets you chose
 
 - which remote access software you want to use (vnc, x2go, rdp)
 - which network you want to use  (host, bridge)
@@ -11,7 +11,7 @@ The build script lets you chose
 
 ## how to build
 
-Download all the files into a subdirectory on your linux docker host, e.g. /home/marc/kali-linux docker
+Download all the files into a subdirectory on your linux docker host, e.g. /home/marc/kali docker
 then cd into that directory and run
 
     sudo ./build
@@ -21,8 +21,8 @@ and starts it. So in a nutshell, the complete command sequence in a linux shell 
 
     apt update
     apt install git
-    git clone https://github.com/onemarcfifty/kali-linux-docker.git
-    cd kali-linux-docker
+    git clone https://github.com/k4m4rTaj/kali-docker.git
+    cd kali-docker
     sudo ./build
 
 ## how to use
@@ -33,10 +33,10 @@ You can now connect to the container by launching your favourite remote access s
 - ssh / x2goserver on port 20022
 - vnc on port 5908 / display :8
 
-All user names are `kaliuser` and all passwords are `onemarcfifty`
+All user names are `kaliuser` and all passwords are `k4m4rTaj`
 
 ## more info
 
-Find all details on [my youtube channel](https://www.youtube.com/onemarcfifty)
+Find all details on [my youtube channel](https://www.youtube.com/k4m4rTaj)
 
-You may also want to join [THE ONEMARCFIFTY DISCORD SERVER](https://discord.com/invite/DXnfBUG) and chat life with me and/or others - cu there ;-)
+You may also want to join [THE k4m4rTaj DISCORD SERVER](https://discord.com/invite/DXnfBUG) and chat life with me and/or others - cu there ;-)
