@@ -11,6 +11,8 @@ XRDP_PORT=13389
 XVNC_DISPLAY=8
 XVNC_PORT=590${XVNC_DISPLAY}
 XSSH_PORT=20022
+VOLUME_HOME="/Users/daniel/kali/home:/home/kaliuser"
+#VOLUME_HOME="kaliuser_data:/home/kaliuser k4m4rtaj/kali"
 
 # ##########################################################################
 # Variables (For menu choice - should not be changed)
@@ -59,6 +61,8 @@ menu() {
                 if (($choice >=1 && $choice < ${#XCHOICE[@]})); then  break ; fi
         done
 }
+
+
 
 # ##########################################################################
 # Script starting point
@@ -127,8 +131,7 @@ docker create   --name kali \
                 -p $XVNC_PORT:$XVNC_PORT \
                 -p $XSSH_PORT:$XSSH_PORT \
                 -t \
-                -v kaliuser_data:/home/kaliuser \
-                k4m4rtaj/kali
+                -v $VOLUME_HOME
 
 # ##########################################
 # start the container
