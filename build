@@ -94,7 +94,7 @@ echo -e "You selected:\n"
 echo "Desktop environment: $XDESKTOP_ENVIRONMENT"
 echo "Remote Access:       $XREMOTE_ACCESS"
 echo "Kali packages:       $XKALI_PKG"
-echo -e "Network:             $XNETWORK \n"
+echo -e "Network:          $XNETWORK \n"
 echo "Hit enter to start building the container"
 read
 
@@ -132,7 +132,7 @@ docker create --name kali_k4 \
               -p $XVNC_PORT:$XVNC_PORT \
               -p $XSSH_PORT:$XSSH_PORT \
               -t \
-              -v /Users/daniel/k4m4rtaj/kali/home/kaliuser:/home/kaliuser k4m4rtaj/kali:1.0.0
+              -v /Users/daniel/k4m4rtaj/kali/home/kaliuser:/home/kaliuser k4m4rtaj/kali:latest
 
 # ##########################################
 # start the container
@@ -144,5 +144,3 @@ echo "Your image and container have been built. It will now be started"
 docker start kali_k4
 echo "Use username kaliuser and password k4m4rTaj"
 
-
-sudo docker run -tid --name kali_k4 --network bridge -p 13389:13389 -v /Users/daniel/kali/home/kaliuser:/home/kaliuser k4m4rtaj/kali:latest
