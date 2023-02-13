@@ -107,7 +107,8 @@ read
 # ##########################################
 
 docker build \
-        -t k4m4rtaj/kali:1.0.0 \
+        -t k4m4rtaj/kali:latest \
+        -t k4m4rtaj/kali:1.0.0.1 \
         --build-arg DESKTOP_ENVIRONMENT=$XDESKTOP_ENVIRONMENT \
         --build-arg REMOTE_ACCESS=$XREMOTE_ACCESS \
         --build-arg KALI_PACKAGE=$XKALI_PKG \
