@@ -41,4 +41,4 @@ Find all details on [my youtube channel](https://www.youtube.com/k4m4rTaj)
 
 You may also want to join [THE k4m4rTaj DISCORD SERVER](https://discord.com/invite/DXnfBUG) and chat life with me and/or others - cu there ;-)
 
-docker run -tid --name kali_k4 --network bridge -p 13389:13389 -v /Users/daniel/kali/home/kaliuser:/home/kaliuser k4m4rtaj/kali:latest
+docker run -tid --name kali_k4 --priviledged --network bridge -p 13389:13389 -v /Users/daniel/kali/home/kaliuser:/home/kaliuser k4m4rtaj/kali:latest
